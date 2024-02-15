@@ -101,9 +101,9 @@ const t1 = gsap.timeline();
 
 // Animation for page1
 t1.from(".page1 .box", {
-  duration: 3, 
+  duration: 1, 
   rotate: 360,
-  scale: 2,
+  scale: 0,
   delay: 1
 });
 
@@ -111,11 +111,14 @@ t1.from(".page1 .box", {
 t1.from(".page2 .box", {
   duration: 1,
   rotate: 360,
-  scale: 2,
-  delay:0,
+  scale: 0,
+  delay:1,
   scrollTrigger: {
     trigger: ".page2 .box",
     scroller:'#main',
     markers: true,
+    start:"top 60%",
+    end:'top 30%',
+    scrub:2
   }
 });
